@@ -60,15 +60,30 @@
               </div>
         </section>
        <section id="testing" class="flex flex-row gap-4 mx-auto my-4 justify-center ">
-        <div class="w-80 bg-orange-400 flex flex-row">
-            <div class="w-40 h-40 bg-orange-400"></div>
+        <div class="w-80 bg-yellow-400 flex flex-row">
+            <div class="w-40 h-40 bg-yellow-400">
+                <h1>15% OFF</h1>
+                <p> on your next purchase</p>
+                <p>use by January 2024</p>
+            </div>
             <img src="./images/cupon-devider.png" alt="">
-            <div class="w-36 h-40 bg-orange-400"></div>
+            <div class="w-36 h-40 bg-yellow-400">
+                <h3>NEW15</h3>
+                <p>Coupon Code</p>
+            </div>
          </div>
-         <div class="w-80 bg-orange-400 flex flex-row">
-             <div class="w-40 h-40 bg-orange-400"></div>
+         <div class="w-80 bg-pink-400 flex flex-row">
+             <div class="w-40 h-40 bg-pink-400">
+                <h1>20% OFF</h1>
+                <p>on your next purchase</p>
+                <p>use by January 2024</p>
+             </div>
              <img src="./images/cupon-devider.png" alt="">
-             <div class="w-36 h-40 bg-orange-400"></div>
+             <div class="w-36 h-40 bg-pink-400">
+                <h3>Couple 20
+                    </h3>
+                    <p>Coupon Code</p>
+             </div>
           </div>
        </section>
        <section>
@@ -138,9 +153,9 @@
         
         
         
-                   <div class="">
-                    <div>
-                        <div class="flex flex-row justify-between">
+                   <div >
+                    <div >
+                        <div class="flex flex-row justify-between my-4">
                             <p>Seat <span id="ticketCount" class="bg-green-400 text-white">0</span></p>
                             <p>Class</p>
                             <p>Price</p>
@@ -155,14 +170,13 @@
                         
                             <p>BDT <span id="totalPrice"></span></p>
                         </div>
-                        <div class="flex">
-                            <p></p>
-                            <p></p>
-                            <p></p>
+                        <div class="flex flex-row justify-between">
+                            <input id="input" type="text" value="" placeholder="Have any cupon?">
+                            <button id="apply-btn" class="text-white bg-green-400">Apply</button>
                         </div>
                         <div class="flex">
-                            <p></p>
-                            <p></p>
+                            <p>Grand Total</p>
+                            <p>BDT <Span id="grand-total">0</Span></p>
                             <p></p>
                         </div>
                         <div class="flex">
@@ -171,14 +185,27 @@
                             <p></p>
                         </div>
                     </div>
-                    <div class="flex flex-col">
+                    <div class="flex flex-col justify-between gap-4">
                         <label for="">Passenger Name*</label>
                         <input type="text" placeholder="Enter your name" class="input input-bordered w-full max-w-xs" /> 
                         <label for="">Phone Number*</label>
                         <input type="number" placeholder="Enter your phone number" class="input input-bordered w-full max-w-xs" />
                         <label for="">Email ID</label>
                         <input type="email" placeholder="Enter your email id" class="input input-bordered w-full max-w-xs" />
-                        <button class="btn btn-active btn-secondary">Next</button>
+                         <!-- Open the modal using ID.showModal() method -->
+<button class="btn" onclick="my_modal_1.showModal()">Next</button>
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Congratulations!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
                     </div>
                    </div>
                 </div>  
@@ -200,6 +227,7 @@
               </div>
             </nav>
           </footer>
+        
     </footer>
   <script src="ticketing.js"></script>  
 </body>

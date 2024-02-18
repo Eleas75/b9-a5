@@ -8,6 +8,7 @@ document.getElementById("scrollButton").addEventListener("click", function() {
 
 //get the buttons
 let count=0;
+let totalPrice=0;
 const btns = document.getElementsByClassName("btn");
 for(const button of btns){
     button.addEventListener("click", function(e){
@@ -35,5 +36,36 @@ container.classList.add("flex","flex-row","justify-between");
 
 
 
+//total price 
+totalPrice=550+totalPrice;
+const totalPrice1=document.getElementById("totalPrice").innerText=totalPrice;
+if (count>=5){
+alert("You can not purchase more than four tickets!")
+}
+
+
+  
 
     })};
+
+ //discount and grand total
+   const discount1=totalPrice*.15;
+   const discount2=totalPrice*.2;
+   const grandTotal=totalPrice-discount1;
+       const btn2=document.getElementById("apply-btn");
+       btn2.addEventListener("click",function(){
+           const cupon1=document.getElementById("input").value;
+           
+           if (cupon1==="couple20"){
+            document.getElementById("grand-total").innerText=totalPrice-totalPrice*.20;
+        }
+
+       else if (cupon1==="couple15")  {
+        document.getElementById("grand-total").innerText=totalPrice-totalPrice*.15;
+       } 
+       else {
+        document.getElementById("grand-total").innerText=totalPrice;
+       }     
+       }
+       );
+ 
