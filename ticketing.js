@@ -32,7 +32,7 @@ const p=document.createElement("p");
 const p1=document.createElement("p");
 const p2=document.createElement("p");
 p.innerText=ticketName;
-p1.innerText="second";
+p1.innerText="economy";
 p2.innerText="550TK";
 container.appendChild(p);
 container.appendChild(p1);
