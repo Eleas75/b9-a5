@@ -19,7 +19,7 @@ for(const button of btns){
             btn3.disabled=true;
             }
         const count1=document.getElementById("ticketCount").innerText=count;
-        const count2=document.getElementById("remainTicket").innerText=40-count; 
+        const count2=document.getElementById("remainTicket").innerText=20-count; 
        
       
 e.target.style.backgroundColor="#4ADE80";
@@ -60,12 +60,16 @@ const totalPrice1=document.getElementById("totalPrice").innerText=totalPrice;
        btn2.addEventListener("click",function(){
            const cupon1=document.getElementById("input").value;
            
-           if (cupon1==="couple20"){
+           if (cupon1==="couple 20"){
             document.getElementById("grand-total").innerText=totalPrice-totalPrice*.20;
+            const hidden=document.getElementById("hidden");
+            hidden.classList.add("hidden");
         }
 
-       else if (cupon1==="couple15")  {
+       else if (cupon1==="NEW15")  {
         document.getElementById("grand-total").innerText=totalPrice-totalPrice*.15;
+        const hidden=document.getElementById("hidden");
+        hidden.classList.add("hidden");
        } 
        else {
         document.getElementById("grand-total").innerText=totalPrice;
