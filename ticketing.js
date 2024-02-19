@@ -13,10 +13,16 @@ const btns = document.getElementsByClassName("btn");
 for(const button of btns){
     button.addEventListener("click", function(e){
         count++;
+        if (count>=5){
+            alert("You can not purchase more than four tickets!");
+            const btn3=document.getElementsByClassName("btn").innerHtml;
+            btn3.disabled=true;
+            }
         const count1=document.getElementById("ticketCount").innerText=count;
         const count2=document.getElementById("remainTicket").innerText=40-count; 
+       
       
-e.target.style.backgroundColor="red";
+e.target.style.backgroundColor="#4ADE80";
 
 //publish ticket name
 const container =document.createElement("div")
@@ -39,9 +45,7 @@ container.classList.add("flex","flex-row","justify-between");
 //total price 
 totalPrice=550+totalPrice;
 const totalPrice1=document.getElementById("totalPrice").innerText=totalPrice;
-if (count>=5){
-alert("You can not purchase more than four tickets!")
-}
+
 
 
   
@@ -68,4 +72,4 @@ alert("You can not purchase more than four tickets!")
        }     
        }
        );
- 
+       
