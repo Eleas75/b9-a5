@@ -22,7 +22,7 @@ for(const button of btns){
         const count2=document.getElementById("remainTicket").innerText=20-count; 
        
       
-e.target.style.backgroundColor="#4ADE80";
+e.target.style.backgroundColor="#1DD100";
 
 //publish ticket name
 const container =document.createElement("div")
