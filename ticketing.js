@@ -60,7 +60,7 @@ const totalPrice1=document.getElementById("totalPrice").innerText=totalPrice;
        btn2.addEventListener("click",function(){
            const cupon1=document.getElementById("input").value;
            
-           if (cupon1==="couple 20"){
+           if (cupon1==="Couple 20"){
             document.getElementById("grand-total").innerText=totalPrice-totalPrice*.20;
             const hidden=document.getElementById("hidden");
             hidden.classList.add("hidden");
